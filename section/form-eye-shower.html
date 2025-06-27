@@ -1,0 +1,171 @@
+<div class="form-section" id="eyeshower-section">
+    <h2>📋 Checklist EYE SHOWER</h2>
+    <form id="eyeshowerForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="eyeshower-tanggal">Tanggal</label>
+                <input type="date" id="eyeshower-tanggal" required>
+            </div>
+            <div class="form-group">
+                <label for="eyeshower-shareId">Share ID Inspektor</label>
+                <input type="text" id="eyeshower-shareId" placeholder="Share ID">
+            </div>
+            <div class="form-group">
+                <label for="eyeshower-inspektor">Nama Inspektor</label>
+                <input type="text" id="eyeshower-inspektor" required placeholder="Nama lengkap inspektor">
+            </div>
+            <div class="form-group">
+                <label for="eyeshower-area">Area</label>
+                <select id="eyeshower-area" required>
+                    <option value="">Pilih Area</option>
+                    <option value="HOD">HOD</option>
+                    <option value="SPS1">SPS1</option>
+                    <option value="SPS2">SPS2</option>
+                    <option value="SPS3">SPS3</option>
+                    <option value="LOGISTIK">LOGISTIK</option>
+                    <option value="TEKNIK">TEKNIK</option>
+                    <option value="LAINNYA">LAINNYA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="eyeshower-nomor">No</label>
+                <input type="text" id="eyeshower-nomor" required placeholder="Nomor identifikasi eye shower">
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <label>Emergency shower/eye wash dilengkapi dengan rambu yang mudah terlihat dan kondisi rambu bagus</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-rambu" value="OK" id="eyeshower-rambu-ok">
+                        <label for="eyeshower-rambu-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-rambu" value="NOT OK" id="eyeshower-rambu-not">
+                        <label for="eyeshower-rambu-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Emergency shower/eye wash jelas terlihat dengan penerangan yang memadai</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-penerangan" value="OK" id="eyeshower-penerangan-ok">
+                        <label for="eyeshower-penerangan-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-penerangan" value="NOT OK" id="eyeshower-penerangan-not">
+                        <label for="eyeshower-penerangan-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Akses & Pancaran air (Jalur ke Emergency shower/eye wash bebas dari penghalang atau material)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-akses" value="OK" id="eyeshower-akses-ok">
+                        <label for="eyeshower-akses-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-akses" value="NOT OK" id="eyeshower-akses-not">
+                        <label for="eyeshower-akses-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Diameter pancaran air shower minimal 20" (50 cm) dan bebas dari penghalang</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-diameter" value="OK" id="eyeshower-diameter-ok">
+                        <label for="eyeshower-diameter-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-diameter" value="NOT OK" id="eyeshower-diameter-not">
+                        <label for="eyeshower-diameter-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Pancuran air di kedua sisi bertemu di satu titik di tengah</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-pancuran" value="OK" id="eyeshower-pancuran-ok">
+                        <label for="eyeshower-pancuran-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-pancuran" value="NOT OK" id="eyeshower-pancuran-not">
+                        <label for="eyeshower-pancuran-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Semua bagian shower/eye wash lengkap dan dalam kondisi baik</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-bagian" value="OK" id="eyeshower-bagian-ok">
+                        <label for="eyeshower-bagian-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-bagian" value="NOT OK" id="eyeshower-bagian-not">
+                        <label for="eyeshower-bagian-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Valve incoming dalam posisi normally open</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-valve" value="OK" id="eyeshower-valve-ok">
+                        <label for="eyeshower-valve-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-valve" value="NOT OK" id="eyeshower-valve-not">
+                        <label for="eyeshower-valve-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Showers - Valve dan pipa-pipa telah tersambung dengan benar tidak ada kebocoran dan korosi</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-pipa" value="OK" id="eyeshower-pipa-ok">
+                        <label for="eyeshower-pipa-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-pipa" value="NOT OK" id="eyeshower-pipa-not">
+                        <label for="eyeshower-pipa-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Eyewashes - Semua part lengkap</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-parts" value="OK" id="eyeshower-parts-ok">
+                        <label for="eyeshower-parts-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="eyeshower-parts" value="NOT OK" id="eyeshower-parts-not">
+                        <label for="eyeshower-parts-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="eyeshower-keterangan">Keterangan</label>
+            <textarea id="eyeshower-keterangan" rows="3" placeholder="Catatan tambahan atau temuan khusus..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">💾 Simpan Data EYE SHOWER</button>
+    </form>
+</div>

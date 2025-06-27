@@ -1,0 +1,153 @@
+<div class="form-section active" id="apar-section">
+    <h2>📋 Checklist APAR (Alat Pemadam Api Ringan)</h2>
+    <form id="aparForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="apar-tanggal">Tanggal</label>
+                <input type="date" id="apar-tanggal" required>
+            </div>
+            <div class="form-group">
+                <label for="apar-shareId">Share ID</label>
+                <input type="text" id="apar-shareId" placeholder="Masukkan Share ID">
+            </div>
+            <div class="form-group">
+                <label for="apar-inspektor">Nama Inspektor</label>
+                <input type="text" id="apar-inspektor" required placeholder="Nama lengkap inspektor">
+            </div>
+            <div class="form-group">
+                <label for="apar-area">Area</label>
+                <select id="apar-area" required>
+                    <option value="">Pilih Area</option>
+                    <option value="HOD">HOD</option>
+                    <option value="SPS1">SPS1</option>
+                    <option value="SPS2">SPS2</option>
+                    <option value="SPS3">SPS3</option>
+                    <option value="LOGISTIK">LOGISTIK</option>
+                    <option value="TEKNIK">TEKNIK</option>
+                    <option value="OFFICE">OFFICE</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="apar-nomor">Nomor APAR</label>
+                <input type="text" id="apar-nomor" required placeholder="Nomor identifikasi APAR">
+            </div>
+            <div class="form-group">
+                <label for="apar-jenisIsi">Jenis Isi</label>
+                <select id="apar-jenisIsi" required>
+                    <option value="">Pilih Jenis</option>
+                    <option value="GAS">GAS</option>
+                    <option value="CAIR">CAIR</option>
+                    <option value="POWDER">POWDER</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <label>Masa Berlaku (Tidak kadaluarsa)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-masaBerlaku" value="OK" id="apar-masa-ok">
+                        <label for="apar-masa-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-masaBerlaku" value="KADALUARSA" id="apar-masa-exp">
+                        <label for="apar-masa-exp">KADALUARSA</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Kondisi Fisik (Tabung tidak retak, tidak berkarat dan tidak penyok)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-kondisiFisik" value="OK" id="apar-fisik-ok">
+                        <label for="apar-fisik-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-kondisiFisik" value="NOT OK" id="apar-fisik-not">
+                        <label for="apar-fisik-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Kondisi Kawat Segel (Ada segel, Pin tidak bengkok, berfungsi baik)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-kawatSegel" value="OK" id="apar-segel-ok">
+                        <label for="apar-segel-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-kawatSegel" value="NOT OK" id="apar-segel-not">
+                        <label for="apar-segel-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Tekanan Gas (Pressure di batas hijau, tidak over atau low)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-tekananGas" value="OK" id="apar-tekanan-ok">
+                        <label for="apar-tekanan-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-tekananGas" value="NOT OK" id="apar-tekanan-not">
+                        <label for="apar-tekanan-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Kondisi Nozzle dan Selang (tidak pecah, tidak sobek, berfungsi dengan baik)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-nozzle" value="OK" id="apar-nozzle-ok">
+                        <label for="apar-nozzle-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-nozzle" value="NOT OK" id="apar-nozzle-not">
+                        <label for="apar-nozzle-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Posisi APAR (Tidak terhalang, tidak diikat, ada tanda)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-posisi" value="OK" id="apar-posisi-ok">
+                        <label for="apar-posisi-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-posisi" value="NOT OK" id="apar-posisi-not">
+                        <label for="apar-posisi-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Kondisi Isi (Saat tabung dibalik tidak ada gumpalan serbuk)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="apar-kondisiIsi" value="OK" id="apar-isi-ok">
+                        <label for="apar-isi-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="apar-kondisiIsi" value="NOT OK" id="apar-isi-not">
+                        <label for="apar-isi-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="apar-keterangan">Keterangan</label>
+            <textarea id="apar-keterangan" rows="3"
+                placeholder="Catatan tambahan atau temuan khusus..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">💾 Simpan Data APAR</button>
+    </form>
+</div>

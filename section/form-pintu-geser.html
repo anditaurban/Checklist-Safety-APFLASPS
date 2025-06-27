@@ -1,0 +1,143 @@
+<div class="form-section" id="pintu-section">
+    <h2>📋 Checklist PINTU GESER</h2>
+    <form id="pintuForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="pintu-tanggal">Tanggal Pemeriksaan</label>
+                <input type="date" id="pintu-tanggal" required>
+            </div>
+            <div class="form-group">
+                <label for="pintu-shareId">Share ID Inspektor</label>
+                <input type="text" id="pintu-shareId" placeholder="Share ID">
+            </div>
+            <div class="form-group">
+                <label for="pintu-inspektor">Nama Inspektor</label>
+                <input type="text" id="pintu-inspektor" required placeholder="Nama lengkap inspektor">
+            </div>
+            <div class="form-group">
+                <label for="pintu-area">Area</label>
+                <select id="pintu-area" required>
+                    <option value="">Pilih Area</option>
+                    <option value="HOD">HOD</option>
+                    <option value="SPS1">SPS1</option>
+                    <option value="SPS2">SPS2</option>
+                    <option value="SPS3">SPS3</option>
+                    <option value="LOGISTIK">LOGISTIK</option>
+                    <option value="TEKNIK">TEKNIK</option>
+                    <option value="OFFICE">OFFICE</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pintu-nomor">Nomor Pintu Geser</label>
+                <input type="text" id="pintu-nomor" required placeholder="Nomor identifikasi pintu geser">
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <label>Pagar (Tidak Rusak/Patah)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-pagar" value="OK" id="pintu-pagar-ok">
+                        <label for="pintu-pagar-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-pagar" value="NOT OK" id="pintu-pagar-not">
+                        <label for="pintu-pagar-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Roda/Bearing Bawah (Kondisi Baik, tidak aus/macet)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-roda" value="OK" id="pintu-roda-ok">
+                        <label for="pintu-roda-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-roda" value="NOT OK" id="pintu-roda-not">
+                        <label for="pintu-roda-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Jalur Rel Roda (Kondisi Baik, tidak patah/pecah)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-rel" value="OK" id="pintu-rel-ok">
+                        <label for="pintu-rel-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-rel" value="NOT OK" id="pintu-rel-not">
+                        <label for="pintu-rel-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Roller Pintu (Kondisi Baik, tidak aus/macet)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-roller" value="OK" id="pintu-roller-ok">
+                        <label for="pintu-roller-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-roller" value="NOT OK" id="pintu-roller-not">
+                        <label for="pintu-roller-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Pelumasan Roda & Gear Pintu (Melakukan Pelumasan Chain & Gear Box)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-pelumasan" value="OK" id="pintu-pelumasan-ok">
+                        <label for="pintu-pelumasan-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-pelumasan" value="NOT OK" id="pintu-pelumasan-not">
+                        <label for="pintu-pelumasan-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Grendel Pintu (Kondisi Baik, Tidak Pecah/Patah)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-grendel" value="OK" id="pintu-grendel-ok">
+                        <label for="pintu-grendel-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-grendel" value="NOT OK" id="pintu-grendel-not">
+                        <label for="pintu-grendel-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-item">
+                <label>Stopper Pintu (Kondisi Baik, Tidak Pecah/Patah)</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-stopper" value="OK" id="pintu-stopper-ok">
+                        <label for="pintu-stopper-ok">OK</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="pintu-stopper" value="NOT OK" id="pintu-stopper-not">
+                        <label for="pintu-stopper-not">NOT OK</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="pintu-keterangan">Catatan temuan kerusakan</label>
+            <textarea id="pintu-keterangan" rows="3" placeholder="Catatan tambahan atau temuan khusus..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">💾 Simpan Data PINTU GESER</button>
+    </form>
+</div>

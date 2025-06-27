@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Checklist Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Safety Checklist-TIV</h1>
+            <p>Sistem Checklist Keselamatan Kerja - Real-time Monitoring</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('apar', event)">
+                <span class="icon">🧯</span>
+                APAR
+            </button>
+            <button class="nav-tab" onclick="showTab('forklift', event)">
+                <span class="icon">🏗️</span>
+                FORKLIFT
+            </button>
+            <button class="nav-tab" onclick="showTab('eyeshower', event)">
+                <span class="icon">🚿</span>
+                EYE SHOWER
+            </button>
+            <button class="nav-tab" onclick="showTab('pintu', event)">
+                <span class="icon">🚪</span>
+                PINTU GESER
+            </button>
+        </div>
+
+        <div class="form-container" id="formContainer">
+            <div class="success-message" id="successMessage">
+                ✅ Data berhasil disimpan dan siap untuk diekspor ke spreadsheet!
+            </div>
+            <!-- APAR Form -->
+            <!-- FORKLIFT Form -->
+            <!-- EYE SHOWER Form -->
+            <!-- PINTU GESER Form -->   
+        </div>
+
+        <div class="export-section">
+            <div class="data-count" id="dataCount">📊 Memuat data...</div>
+            <button class="export-btn" onclick="refreshPage()">🔄 Refresh</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
