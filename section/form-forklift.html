@@ -1,151 +1,277 @@
-<div class="form-section" id="forklift-section">
-    <h2>📋 Checklist FORKLIFT</h2>
-    <form id="forkliftForm">
-        <div class="form-row">
+    <div class="form-section" id="forklift-section">
+        <h2>📋 Checklist FORKLIFT</h2>
+        <form id="forkliftForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="forklift-tanggal">Tanggal Pemeriksaan</label>
+                    <input type="date" id="forklift-tanggal" required>
+                </div>
+                <div class="form-group">
+                    <label for="forklift-shareId">Share ID Inspektor</label>
+                    <input type="text" id="forklift-shareId" placeholder="Share ID">
+                </div>
+                <div class="form-group">
+                    <label for="forklift-inspektor">Nama Inspektor</label>
+                    <input type="text" id="forklift-inspektor" required placeholder="Nama lengkap inspektor">
+                </div>
+                <div class="form-group">
+                    <label for="forklift-area">Area</label>
+                    <select id="forklift-area" required>
+                        <option value="">Pilih Area</option>
+                        <option value="LOGISTIK HOD">LOGISTIK HOD</option>
+                        <option value="LOGISTIK SPS1">LOGISTIK SPS1</option>
+                        <option value="LOGISTIK SPS2">LOGISTIK SPS2</option>
+                        <option value="LOGISTIK SPS3">LOGISTIK SPS3</option>
+                        <option value="LOGISTIK GUDANG MATERIAL">LOGISTIK GUDANG MATERIAL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="forklift-shift">Shift</label>
+                    <select id="forklift-shift">
+                        <option value="">Pilih Shift</option>
+                        <option value="SHIFT 1">SHIFT 1</option>
+                        <option value="SHIFT 2">SHIFT 2</option>
+                        <option value="SHIFT 3">SHIFT 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="forklift-nomor">Nomor Forklift</label>
+                    <input type="text" id="forklift-nomor" required placeholder="Contoh: E7190">
+                </div>
+            </div>
+
+            <h3>🔍 Pemeriksaan Critical Point</h3>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <label>Rem/Kopling berfungsi baik</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-rem" value="OK" id="forklift-rem-ok">
+                            <label for="forklift-rem-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-rem" value="NOT OK" id="forklift-rem-not">
+                            <label for="forklift-rem-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Fork turun dengan kecepatan normal (tidak cepat)</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-fork" value="OK" id="forklift-fork-ok">
+                            <label for="forklift-fork-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-fork" value="NOT OK" id="forklift-fork-not">
+                            <label for="forklift-fork-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Sistem oli hidrolik normal (tidak bocor)</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-oli" value="OK" id="forklift-oli-ok">
+                            <label for="forklift-oli-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-oli" value="NOT OK" id="forklift-oli-not">
+                            <label for="forklift-oli-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Fungsi setir/kemudi normal</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-setir" value="OK" id="forklift-setir-ok">
+                            <label for="forklift-setir-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-setir" value="NOT OK" id="forklift-setir-not">
+                            <label for="forklift-setir-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Klakson berfungsi baik</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-klakson" value="OK" id="forklift-klakson-ok">
+                            <label for="forklift-klakson-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-klakson" value="NOT OK" id="forklift-klakson-not">
+                            <label for="forklift-klakson-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Koneksi antar sel battery kondisi baik, bersih dan kering</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-battery" value="OK" id="forklift-battery-ok">
+                            <label for="forklift-battery-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-battery" value="NOT OK" id="forklift-battery-not">
+                            <label for="forklift-battery-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Ban depan dan belakang masih dalam kondisi baik dan standar</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-ban" value="OK" id="forklift-ban-ok">
+                            <label for="forklift-ban-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-ban" value="NOT OK" id="forklift-ban-not">
+                            <label for="forklift-ban-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>kondisi Garpu dan Pengunci</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-garpu" value="OK" id="forklift-garpu-ok">
+                            <label for="forklift-garpu-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-garpu" value="NOT OK" id="forklift-garpu-not">
+                            <label for="forklift-garpu-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Pelumas Rantai dan Alur Roda</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-pelumas" value="OK" id="forklift-pelumas-ok">
+                            <label for="forklift-pelumas-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-pelumas" value="NOT OK" id="forklift-pelumas-not">
+                            <label for="forklift-pelumas-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Atap Pelindung Operator/Lampu Sign/Lampu Rem/Spion</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-atap" value="OK" id="forklift-atap-ok">
+                            <label for="forklift-atap-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-atap" value="NOT OK" id="forklift-atap-not">
+                            <label for="forklift-atap-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Sound Alarm Mundur/Lampu Rotary/Lampu Keselamatan</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-alarm" value="OK" id="forklift-alarm-ok">
+                            <label for="forklift-alarm-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-alarm" value="NOT OK" id="forklift-alarm-not">
+                            <label for="forklift-alarm-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Tertera Jenis dan Tonase/Pemberat Forklift Tidak Goyang/Kondisi Body Baik</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-body" value="OK" id="forklift-body-ok">
+                            <label for="forklift-body-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-body" value="NOT OK" id="forklift-body-not">
+                            <label for="forklift-body-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Ruang Kabin (Pengatur Tempat Duduk/Safety Belt)</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-kabin1" value="OK" id="forklift-kabin1-ok">
+                            <label for="forklift-kabin1-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-kabin1" value="NOT OK" id="forklift-kabin1-not">
+                            <label for="forklift-kabin1-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Ruang Kabin (Tuas/Pedal)</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-kabin2" value="OK" id="forklift-kabin2-ok">
+                            <label for="forklift-kabin2-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-kabin2" value="NOT OK" id="forklift-kabin2-not">
+                            <label for="forklift-kabin2-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Power Steering</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-power" value="OK" id="forklift-power-ok">
+                            <label for="forklift-power-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-power" value="NOT OK" id="forklift-power-not">
+                            <label for="forklift-power-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi Start Mesin</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-start" value="OK" id="forklift-start-ok">
+                            <label for="forklift-start-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-start" value="NOT OK" id="forklift-start-not">
+                            <label for="forklift-start-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-item">
+                    <label>Kondisi APAR Forklift</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-apar" value="OK" id="forklift-apar-ok">
+                            <label for="forklift-apar-ok">OK</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="forklift-apar" value="NOT OK" id="forklift-apar-not">
+                            <label for="forklift-apar-not">NOT OK</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group">
-                <label for="forklift-tanggal">Tanggal Pemeriksaan</label>
-                <input type="date" id="forklift-tanggal" required>
-            </div>
-            <div class="form-group">
-                <label for="forklift-shareId">Share ID Inspektor</label>
-                <input type="text" id="forklift-shareId" placeholder="Share ID">
-            </div>
-            <div class="form-group">
-                <label for="forklift-inspektor">Nama Inspektor</label>
-                <input type="text" id="forklift-inspektor" required placeholder="Nama lengkap inspektor">
-            </div>
-            <div class="form-group">
-                <label for="forklift-area">Area</label>
-                <select id="forklift-area" required>
-                    <option value="">Pilih Area</option>
-                    <option value="LOGISTIK HOD">LOGISTIK HOD</option>
-                    <option value="LOGISTIK SPS1">LOGISTIK SPS1</option>
-                    <option value="LOGISTIK SPS2">LOGISTIK SPS2</option>
-                    <option value="LOGISTIK SPS3">LOGISTIK SPS3</option>
-                    <option value="LOGISTIK GUDANG MATERIAL">LOGISTIK GUDANG MATERIAL</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="forklift-shift">Shift</label>
-                <select id="forklift-shift">
-                    <option value="">Pilih Shift</option>
-                    <option value="SHIFT 1">SHIFT 1</option>
-                    <option value="SHIFT 2">SHIFT 2</option>
-                    <option value="SHIFT 3">SHIFT 3</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="forklift-nomor">Nomor Forklift</label>
-                <input type="text" id="forklift-nomor" required placeholder="Contoh: E7190">
-            </div>
-        </div>
-
-        <h3>🔍 Pemeriksaan Critical Point</h3>
-        <div class="checkbox-group">
-            <div class="checkbox-item">
-                <label>Rem/Kopling berfungsi baik</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-rem" value="OK" id="forklift-rem-ok">
-                        <label for="forklift-rem-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-rem" value="NOT OK" id="forklift-rem-not">
-                        <label for="forklift-rem-not">NOT OK</label>
-                    </div>
-                </div>
+                <label for="forklift-keterangan">Keterangan</label>
+                <textarea id="forklift-keterangan" rows="3"
+                    placeholder="Catatan tambahan atau temuan khusus..."></textarea>
             </div>
 
-            <div class="checkbox-item">
-                <label>Fork turun dengan kecepatan normal (tidak cepat)</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-fork" value="OK" id="forklift-fork-ok">
-                        <label for="forklift-fork-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-fork" value="NOT OK" id="forklift-fork-not">
-                        <label for="forklift-fork-not">NOT OK</label>
-                    </div>
-                </div>
-            </div>
+            <button type="submit" class="submit-btn">💾 Simpan Data FORKLIFT</button>
+        </form>
 
-            <div class="checkbox-item">
-                <label>Sistem oli hidrolik normal (tidak bocor)</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-oli" value="OK" id="forklift-oli-ok">
-                        <label for="forklift-oli-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-oli" value="NOT OK" id="forklift-oli-not">
-                        <label for="forklift-oli-not">NOT OK</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checkbox-item">
-                <label>Fungsi setir/kemudi normal</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-setir" value="OK" id="forklift-setir-ok">
-                        <label for="forklift-setir-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-setir" value="NOT OK" id="forklift-setir-not">
-                        <label for="forklift-setir-not">NOT OK</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checkbox-item">
-                <label>Klakson berfungsi baik</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-klakson" value="OK" id="forklift-klakson-ok">
-                        <label for="forklift-klakson-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-klakson" value="NOT OK" id="forklift-klakson-not">
-                        <label for="forklift-klakson-not">NOT OK</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checkbox-item">
-                <label>Koneksi antar sel battery kondisi baik, bersih dan kering</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-battery" value="OK" id="forklift-battery-ok">
-                        <label for="forklift-battery-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-battery" value="NOT OK" id="forklift-battery-not">
-                        <label for="forklift-battery-not">NOT OK</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="checkbox-item">
-                <label>Ban depan dan belakang masih dalam kondisi baik dan standar</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-ban" value="OK" id="forklift-ban-ok">
-                        <label for="forklift-ban-ok">OK</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" name="forklift-ban" value="NOT OK" id="forklift-ban-not">
-                        <label for="forklift-ban-not">NOT OK</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="forklift-keterangan">Keterangan</label>
-            <textarea id="forklift-keterangan" rows="3" placeholder="Catatan tambahan atau temuan khusus..."></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">💾 Simpan Data FORKLIFT</button>
-    </form>
-</div>
+    </div>

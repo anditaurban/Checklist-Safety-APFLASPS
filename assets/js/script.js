@@ -43,8 +43,6 @@ function loadForm(fileName, tabName) {
       document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
       const cursec = document.getElementById(`${tabName}-section`);
       if (cursec) cursec.classList.add('active');
-
-      updateDataCount();
     })
     .catch(err => {
       console.error('fetch fail:', err);
@@ -87,12 +85,22 @@ function saveForkliftData() {
     "Shift": getValue('forklift-shift'),
     "Nomor Forklift": getValue('forklift-nomor'),
     "Kondisi Rem/Kopling": getRadioValue("forklift-rem"),
-    "Fungsi Setir/Kemudi": getRadioValue("forklift-fork"),
+    "Kecepatan Fork": getRadioValue("forklift-fork"),
     "Sistem Oli Hidrolik": getRadioValue("forklift-oli"),
     "Fungsi Setir/Kemudi": getRadioValue("forklift-setir"),
     "Fungsi Klakson": getRadioValue("forklift-klakson"),
     "Kondisi Koneksi Battery": getRadioValue("forklift-battery"),
     "Kondisi Ban (Depan/Belakang)": getRadioValue("forklift-ban"),
+    "Kondisi Garpu dan Pengunci": getRadioValue("forklift-garpu"),
+    "Kondisi Pelumas Rantai dan Alur Roda": getRadioValue("forklift-pelumas"),
+    "Kondisi Atap Pelindung Opertor/Lampu Sign/Lampu Rem/Spion": getRadioValue("forklift-atap"),
+    "Kondisi Sound Alarm Mundur/Lampu Rotary/Lampu Keselamatan": getRadioValue("forklift-alarm"),
+    "Tertera Jenis dan Tonase/Pemeberat Forklift Tidak Goyang/Kondisi Body Baik": getRadioValue("forklift-body"),
+    "Kondisi Ruang Kabin (Pengatur Tempat Duduk/Safety Belt)": getRadioValue("forklift-kabin1"),
+    "Kondisi Ruang Kabin (Tuas/Pedal)": getRadioValue("forklift-kabin2"),
+    "Kondisi Power Steering": getRadioValue("forklift-power"),
+    "Kondisi Start Mesin": getRadioValue("forklift-start"),
+    "Kondisi APAR Forklift": getRadioValue("forklift-apar"),
     "Keterangan": getValue('forklift-keterangan')
   };
   sendToSheet(data, 'forkliftForm');
@@ -173,31 +181,6 @@ function showSuccessMessage() {
   }
 }
 
-function updateCountFromGAS(data) {
-  const total =
-    (data.APAR || 0) +
-    (data.FORKLIFT || 0) +
-    (data.EYE_SHOWER || 0) +
-    (data.PINTU_GESER || 0);
-
-  document.getElementById('dataCount').textContent =
-    `📊 Total data tersimpan: ${total} entries
-    (APAR: ${data.APAR}, FORKLIFT: ${data.FORKLIFT},
-    EYE SHOWER: ${data.EYE_SHOWER}, PINTU GESER: ${data.PINTU_GESER})`;
-    console.log("Data dari Apps Script:", data);
-}
-
-function updateDataCount() {
-  const iframe = document.createElement('iframe');
-  iframe.src = 'https://script.google.com/macros/s/AKfycbxde20REwoxAOPkG7jV2FcZ743E1k2TH0z0QMbGPRRkLmmob2QLmjNRhTETxSYRbz7c/exec';
-  iframe.style.display = 'none';
-  iframe.onload = () => console.log("iframe loaded");
-  document.body.appendChild(iframe);
-  console.log("Memuat iframe GAS...");
-}
-
-updateDataCount();
-
 function refreshPage() { window.location.reload(); }
 
 function sendToSheet(data, formId) {
@@ -234,7 +217,6 @@ function sendToSheet(data, formId) {
 
     form.reset();
     setCurrentDate();
-    updateDataCount();
 
   }).catch(err => {
     // Tampilkan alert error
