@@ -140,7 +140,7 @@ function savePintuData() {
     "Kondisi Roda": getRadioValue("pintu-roda"),
     "Jalur Rel Roda": getRadioValue("pintu-rel"),
     "Roller Pintu": getRadioValue("pintu-roller"),
-    "Pelumasan Roda": getRadioValue("pintu-pelumasan"),
+    "Pelumasan Roda dan Gear Pintu": getRadioValue("pintu-pelumasan"),
     "Grendel Pintu": getRadioValue("pintu-grendel"),
     "Stopper Pintu": getRadioValue("pintu-stopper"),
     "Keterangan": getValue('pintu-keterangan')
